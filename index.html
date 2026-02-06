@@ -51,7 +51,7 @@
 
     /* PROJECTS SECTION */
     .projects {
-      padding: 80px 20px 120px; /* extra bottom so it doesn't hide behind nav */
+      padding: 80px 20px 80px;
       background: #ffffff;
       color: #111827;
       text-align: center;
@@ -102,6 +102,57 @@
       color: #ffffff;
     }
 
+    /* CONTACT SECTION */
+    .contact {
+      background: #f3f4f6;
+      color: #111827;
+      padding: 80px 20px 140px; /* extra bottom so nav doesn't cover it */
+    }
+
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-left-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: #6b7280;
+    }
+
+    .contact-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: #6b7280;
+    }
+
+    .contact-value {
+      margin-bottom: 20px;
+    }
+
+    .contact-social-icons a {
+      margin-right: 12px;
+      font-size: 1.3rem;
+      color: #4b5563;
+    }
+
+    .contact-social-icons a:hover {
+      color: #1d4ed8;
+    }
+
     /* BOTTOM NAV BAR */
     .nav {
       position: fixed;
@@ -139,6 +190,10 @@
       .nav {
         padding: 10px 15px;
       }
+
+      .contact-inner {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -174,11 +229,47 @@
         Includes trends over time, top locations, incident types and station analysis.
       </p>
 
+      <!-- TODO: replace YOUR_POWER_BI_URL with your real Power BI "view" link -->
       <a class="project-button"
-         href="PASTE_YOUR_POWER_BI_URL_HERE"
+         href="YOUR_POWER_BI_URL"
          target="_blank">
          View Project
       </a>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact-inner">
+      <!-- Left side -->
+      <div>
+        <div class="contact-left-title">Let’s connect</div>
+        <p>
+          I’m based in Auckland and open to opportunities in data analysis and
+          business intelligence. Feel free to reach out by email or LinkedIn.
+        </p>
+      </div>
+
+      <!-- Right side: details -->
+      <div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Auckland, New Zealand</div>
+
+        <div class="contact-label">Email</div>
+        <div class="contact-value">
+          <a href="mailto:fabian.niloq@gmail.com">fabian.niloq@gmail.com</a>
+        </div>
+
+        <div class="contact-label">Social</div>
+        <div class="contact-social-icons">
+          <a href="https://www.linkedin.com/in/fabian-nilo-quezada-13763b184"
+             target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
