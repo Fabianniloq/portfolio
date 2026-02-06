@@ -17,6 +17,7 @@
       background: radial-gradient(circle at top, #3b3f58, #020617);
     }
 
+    /* HERO (top section) */
     .hero {
       height: 100vh;
       display: flex;
@@ -24,16 +25,19 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 0 20px;
     }
 
     h1 {
       letter-spacing: 0.25em;
       font-size: 3rem;
+      margin-bottom: 20px;
     }
 
     p {
       max-width: 600px;
       line-height: 1.6;
+      margin: 0 auto 10px auto;
     }
 
     a {
@@ -41,6 +45,64 @@
       text-decoration: none;
     }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* PROJECTS SECTION */
+    .projects {
+      padding: 80px 20px 120px; /* extra bottom so it doesn't hide behind nav */
+      background: #ffffff;
+      color: #111827;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .project-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #f9fafb;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      margin-bottom: 25px;
+    }
+
+    .project-button {
+      display: inline-block;
+      padding: 12px 25px;
+      border: 2px solid #111827;
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+    }
+
+    .project-button:hover {
+      background: #111827;
+      color: #ffffff;
+    }
+
+    /* BOTTOM NAV BAR */
     .nav {
       position: fixed;
       bottom: 0;
@@ -49,16 +111,40 @@
       background: rgba(0,0,0,0.7);
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      box-sizing: border-box;
     }
 
     .icons a {
       margin-left: 15px;
       font-size: 1.3rem;
     }
+
+    .icons a:hover {
+      text-decoration: none;
+      color: #60a5fa;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.15em;
+      }
+
+      .project-card {
+        padding: 20px;
+      }
+
+      .nav {
+        padding: 10px 15px;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- HERO SECTION -->
   <div class="hero">
     <h1>FABIAN NILO PORTFOLIO</h1>
     <p>
@@ -73,6 +159,30 @@
     </p>
   </div>
 
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1508614999368-9260051292e5"
+           alt="Fire incidents analysis">
+
+      <h3>Power BI: Analysing South Australian Fire Incidents (2018–2022)</h3>
+
+      <p>
+        Interactive Power BI dashboard analysing fire service incidents in South Australia.
+        Includes trends over time, top locations, incident types and station analysis.
+      </p>
+
+      <a class="project-button"
+         href="PASTE_YOUR_POWER_BI_URL_HERE"
+         target="_blank">
+         View Project
+      </a>
+    </div>
+  </section>
+
+  <!-- BOTTOM NAV BAR -->
   <div class="nav">
     <span>HOME PAGE</span>
     <div class="icons">
@@ -87,3 +197,4 @@
 
 </body>
 </html>
+
